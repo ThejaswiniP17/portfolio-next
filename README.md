@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Premium Developer Portfolio - Thejaswini P
 
-## Getting Started
+This is a premium, modern, single-page developer portfolio built from scratch for **Thejaswini P** using the latest Next.js 15 App Router, TypeScript, Tailwind CSS v4, and Framer Motion animations.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Apple / Linear Design System**: Dark/Light mode theme syncing with smooth animations, custom layouts, and a responsive structure.
+- **Dynamic Scrollspy & Active Indicators**: Floating navbar that updates active indicators based on screen viewport offset.
+- **Framer Motion Animations**: Entrance and hover transformations built cleanly on viewport visibility.
+- **Production Contact Form**: Form submission proxy sending messages securely to client inbox via AJAX.
+- **Type-safe Data Model**: Dynamic, clean representation of experiences, projects, and certifications in type-safe datasets.
+- **PWA Ready**: Configuration file with browser branding assets, standalone installation capabilities, sitemaps, and robots crawler files.
+- **PDF Resume Viewer**: Embedded sandbox frame allowing recruiters to download or inspect the PDF resume.
+
+---
+
+## Directory Structure
+
+```text
+portfolio-next/
+├── public/                 # Static assets, PDFs, branding elements
+│   ├── favicon.ico         # Custom shortcut icon
+│   ├── manifest.json       # PWA configurations
+│   ├── robots.txt          # Crawler indexing rules
+│   ├── sitemap.xml         # Site structure index
+│   └── media/              # Certificate PDF attachments and headshot avatars
+├── src/
+│   ├── app/                # Next.js App Router core controller
+│   │   ├── globals.css     # Global styling rules, variables, and glass utilities
+│   │   ├── layout.tsx      # Main layout template loading Inter and Poppins fonts
+│   │   ├── page.tsx        # Coordinates all structural pages
+│   │   └── not-found.tsx   # Custom 404 error template
+│   ├── components/         # Premium React UI elements
+│   │   ├── LoadingScreen.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Certifications.tsx
+│   │   ├── Education.tsx
+│   │   ├── ResumePortal.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   └── data/
+│       └── portfolioData.ts # Type-safe central data file
+├── package.json            # Script definitions and dependency trees
+└── tsconfig.json           # TypeScript compilation configurations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local Development Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To test the application locally, run these command blocks:
 
-## Learn More
+1. **Install Packages**:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Open Browser**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Verify Output**:
+   Build the optimized production app locally to verify everything is solid:
+   ```bash
+   npm run build
+   ```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Vercel Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy the project to **Vercel** serverless hosting:
+
+1. Create a Vercel Account: [Vercel Sign Up](https://vercel.com/signup).
+2. Connect your GitHub account.
+3. Import the `portfolio-next` repository.
+4. Set the Framework Preset to **Next.js**.
+5. Click **Deploy**. Vercel will automatically configure routing, build optimization, CDN distribution, and SSL.

@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/weather",
+        destination: "http://localhost:3001",
+        permanent: false,
+      },
+      {
+        source: "/projects/weather-dashboard",
+        destination: "http://localhost:3001",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
