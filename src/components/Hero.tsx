@@ -107,19 +107,19 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const, delay: 0.3 }}
-          className="relative justify-self-center z-10 hidden md:block"
+          className="relative justify-self-center z-10 block mt-8 md:mt-0"
         >
-          <div className="w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden border border-card-border bg-card-bg shadow-2xl relative z-10 select-none">
+          <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden border border-card-border bg-card-bg shadow-2xl relative z-10 select-none">
             <img
-              src="media/profile/avatar.png"
+              src="/media/profile/avatar.png"
               alt={profile.name}
               className="w-full h-full object-cover"
               onError={(e) => {
-                e.currentTarget.src = "home/static/images/avatar_placeholder.png";
+                e.currentTarget.src = "/media/profile/avatar.png";
               }}
             />
           </div>
-          <div className="absolute top-6 right-[-20px] w-full h-full rounded-2xl bg-primary-light/30 border border-dashed border-primary/30 z-0 pointer-events-none dark:bg-primary-light/5" />
+          <div className="absolute top-6 right-[-16px] w-full h-full rounded-2xl bg-primary-light/30 border border-dashed border-primary/30 z-0 pointer-events-none dark:bg-primary-light/5" />
         </motion.div>
       </div>
     </section>
